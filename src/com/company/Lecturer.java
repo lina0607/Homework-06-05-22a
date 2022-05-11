@@ -2,26 +2,19 @@ package com.company;
 
 public class Lecturer extends Person {
 
-    String specialization = "Informatics & Software Development";
-    float salary = 3500;
+    String specialization;
+    int salary;
 
-    Lecturer(String specialization, float salary) {
+    Lecturer(String specialization, int salary) {
         this.specialization = specialization;
         this.salary = salary;
     }
 
-    public Lecturer() {
-
-    }
-
-    static void printDetails() {
-    }
-
-    String getSpecialization() {
+    public String getSpecialization() {
         return specialization;
     }
 
-    Float getSalary() {
+    public int getSalary() {
         return salary;
     }
 
@@ -29,13 +22,13 @@ public class Lecturer extends Person {
         this.specialization = specialization;
     }
 
-    public void setSalary(float salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 
     @Override
     public String toString() {
-        return "Lecturer{" + "specialization='" + specialization + '\'' + ", salary=" + salary + '}';
+        return "Lecturer{" + "specialization='" + specialization + '\'' + ", salary=" + salary + "name" + name + '}';
     }
 }
 

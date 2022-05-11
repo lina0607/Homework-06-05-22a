@@ -1,40 +1,54 @@
 package com.company;
 
-public class Shape {
+public abstract class Shape {
 
-    public boolean isFilled;
-    String color;
-    boolean shape;
+    protected boolean isFilled;
+    protected String color;
 
     Shape() {
-        String color = "unknown";
-        boolean isFilled = false;
+        this.color = "unknown";
+        this.isFilled = false;
     }
 
     Shape(String color, boolean isFilled) {
         this.color = color;
-        this.isFilled = false;
+        this.isFilled = isFilled;
     }
 
-    String getColor() {
+    public String getColor() {
         return color;
     }
 
-    Boolean getShape() {
-        return false;
+    public boolean getIsFilled() {
+        return isFilled;
     }
 
-    void setColor(String color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
-    void setShape(boolean shape) {
-        this.shape = shape;
+    public void setIsFilled(boolean isFilled) {
+
+        this.isFilled = isFilled;
+    }
+
+    //abstract methods are methods without a body
+    public abstract double getArea();
+
+    public abstract double getPerimeter();
+
+
+    String getFilled() {
+        if (isFilled) {
+            return "filled";
+        } else {
+            return "not filled";
+        }
     }
 
     @Override
     public String toString() {
-        return "Shape{" + "with color of=" + color + " and filled/Not filled" + shape + '}';
+        return "Shape with color " + color + " and" + getFilled();
     }
 }
 

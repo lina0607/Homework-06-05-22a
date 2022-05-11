@@ -2,39 +2,37 @@ package com.company;
 
 public class Circle extends Shape{
 
-    int radius;
+    float radius;
 
     Circle() {
-        color = "unknown";
-        boolean isFilled = false;
-        int radius = 1;
+        super();
+        this.radius = 1f;
     }
 
-    Circle(String color, boolean isFilled, int radius) {
-        this.color = color;
-        this.isFilled = false;
+    Circle(String color, boolean isFilled, float radius) {
+        super(color, isFilled);      //questo e'pari alla transcrizione this.setColor = color, this.setFilled = isFilled
         this.radius = radius;
     }
 
-    int getRadius() {
+    float getRadius() {
         return radius;
     }
 
-    void setRadius(int radius) {
+    void setRadius(float radius) {
         this.radius = radius;
     }
 
-    double getArea() {
+    public double getArea() {
         return radius*radius*Math.PI;
     }
 
-    double getPerimeter() {
+    public double getPerimeter() {
         return 2*radius*Math.PI;
     }
 
     @Override
     public String toString() {
-        return "Circle{" + "with radius=" + radius + getShape() + getColor() + '}';
+        return "Circle with radius" + radius +"which is a subclass of " + super.toString();
     }
 }
 

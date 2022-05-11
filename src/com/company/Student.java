@@ -2,33 +2,27 @@ package com.company;
 
 public class Student extends Person{
 
-    String typeOfStudy = "Java Developer";
-    int yearOfStudy = 2022;
-    float studyPrice = 100;
+    private String typeOfStudy;
+    private int yearOfStudy;
+    private double studyPrice;
 
-    Student() {
+    Student(String typeOfStudy, int yearOfStudy, double studyPrice) {
         this.typeOfStudy = typeOfStudy;
         this.yearOfStudy = yearOfStudy;
         this.studyPrice = studyPrice;
     }
 
-    public static void printDetails() {
-    }
 
-    String getTypeOfStudy() {
+    public String getTypeOfStudy() {
         return typeOfStudy;
     }
 
-    int getYearOfStudy() {
+    public int getYearOfStudy() {
         return yearOfStudy;
     }
 
-    float getStudyPrice() {
+    public double getStudyPrice() {
         return studyPrice;
-    }
-
-    public float[] getLecturer() {
-        return new float[]{Float.parseFloat(typeOfStudy), yearOfStudy, studyPrice};
     }
 
     public void setTypeOfStudy(String typeOfStudy) {
@@ -39,7 +33,7 @@ public class Student extends Person{
         this.yearOfStudy = yearOfStudy;
     }
 
-    public void setStudyPrice(float studyPrice) {
+    public void setStudyPrice(double studyPrice) {
         this.studyPrice = studyPrice;
     }
 
